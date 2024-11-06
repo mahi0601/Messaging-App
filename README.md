@@ -1,4 +1,4 @@
-Messaging App
+#Messaging App
 This Django-based messaging application is designed for customer service agents to manage and respond to customer inquiries efficiently. It includes features like message prioritization, search, canned responses, and real-time updates using WebSockets.
 
 Table of Contents
