@@ -13,7 +13,9 @@ This Django-based messaging application is designed for customer service agents 
 - [License](#license)
 
 ---
-
+##Logn Credentials
+-**Username** : bipasha
+-**Password** : qwerty1234
 ## Features
 
 - **Agent Dashboard**: View, search, and manage customer messages.
