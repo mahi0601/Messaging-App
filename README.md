@@ -1,32 +1,50 @@
-#Messaging App
+# Messaging App
+
 This Django-based messaging application is designed for customer service agents to manage and respond to customer inquiries efficiently. It includes features like message prioritization, search, canned responses, and real-time updates using WebSockets.
 
-Table of Contents
-Features
-Prerequisites
-Installation
-Usage
-Screenshots
-Video Walkthrough
-Contributing
-License
-Features
-Agent Dashboard: View, search, and manage customer messages.
-Urgency Detection: Automatically flags high-priority messages based on keywords.
-Search and Filtering: Find specific messages using keywords or customer names.
-Canned Responses: Quickly respond to common inquiries.
-Real-Time Updates: Receive new messages instantly with WebSocket support.
-Message Assignment and Status: Track message status as "new," "in-progress," or "closed."
-Prerequisites
+## Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Video Walkthrough](#video-walkthrough)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+
+- **Agent Dashboard**: View, search, and manage customer messages.
+- **Urgency Detection**: Automatically flags high-priority messages based on keywords.
+- **Search and Filtering**: Find specific messages using keywords or customer names.
+- **Canned Responses**: Quickly respond to common inquiries.
+- **Real-Time Updates**: Receive new messages instantly with WebSocket support.
+- **Message Assignment and Status**: Track message status as "new," "in-progress," or "closed."
+
+---
+
+## Prerequisites
+
 Before you start, make sure you have the following installed:
 
-Python 3.7+: Download Python
-Git: Download Git
-Virtualenv: Recommended for managing project dependencies in isolation
-Installation
+- **Python 3.7+**: [Download Python](https://www.python.org/downloads/)
+- **Git**: [Download Git](https://git-scm.com/downloads)
+- **Virtualenv**: Recommended for managing project dependencies in isolation
+
+---
+
+## Installation
+
 Follow these steps to set up the project on your local machine.
 
-1. Clone the Repository
+### 1. Clone the Repository
+
+bash
+git clone https://github.com/yourusername/Messaging-App.git
+cd Messaging-App
+
 bash
 Copy code
 git clone https://github.com/yourusername/Messaging-App.git
