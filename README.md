@@ -120,7 +120,7 @@ Video Walkthrough
 Watch the videos below for a comprehensive walkthrough of the application and its features:
 
 Video 1: Application Overview and Setup
-(https://link-to-video](https://www.loom.com/share/c688bd1d9b784d93abc647e5c62d3d77?sid=1c31f1f3-461a-41b4-b2f8-4d8738128586)
+(https://www.loom.com/share/c688bd1d9b784d93abc647e5c62d3d77?sid=1c31f1f3-461a-41b4-b2f8-4d8738128586)
 
 Video 2: Feature Demonstration and Usage
 (https://www.loom.com/share/c688bd1d9b784d93abc647e5c62d3d77?sid=d5b1d78b-77dc-4129-9963-aa5da36e375a)
