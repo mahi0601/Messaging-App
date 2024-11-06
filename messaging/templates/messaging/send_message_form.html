@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Message</title>
+</head>
+<body>
+    <h1>Send a Message</h1>
+    <form id="sendMessageForm">
+        {% csrf_token %}
+        <input type="text" name="customer_name" placeholder="Your Name" required><br>
+        <textarea name="content" placeholder="Type your message here" required></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <p id="response"></p>
+
+    <script>
+        function getCSRFToken() {
+    return document.querySelector('[name=csrfmiddlewaretoken]').value;
+}
+
+document.getElementById("sendMessageForm").onsubmit = function(event) {
+    event.preventDefault();
+    const formData = {
+        customer_name: document.querySelector("input[name='customer_name']").value,
+        content: document.querySelector("textarea[name='content']").value
+    };
+
+    fetch('/api/send_message/', {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCSRFToken()  // Include CSRF token here
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("response").innerText = data.status || data.error;
+    });
+};
+
+    </script>
+</body>
+</html>

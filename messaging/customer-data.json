@@ -1,0 +1,24 @@
+[
+    {
+        "model": "messaging.customer",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "phone": "1234567890",
+            "account_number": "AC123456",
+            "loan_status": "Approved"
+        }
+    },
+    {
+        "model": "messaging.customer",
+        "pk": 2,
+        "fields": {
+            "name": "Jane Smith",
+            "email": "janesmith@example.com",
+            "phone": "0987654321",
+            "account_number": "AC654321",
+            "loan_status": "Pending"
+        }
+    }
+]

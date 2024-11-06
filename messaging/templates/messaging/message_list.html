@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Messaging Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Messaging Dashboard</h1>
+    </header>
+    
+    <!-- Search Bar -->
+    <form method="get" action="{% url 'message_list' %}">
+        <input type="text" name="q" placeholder="Search messages" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+    
+    <!-- Message List Section -->
+    <section class="message-list">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message-card {% if message.urgency %}urgent{% endif %}">
+                    <div class="message-header">
+                        <h3>{{ message.customer.name }}</h3>
+                        <span class="timestamp">{{ message.timestamp }}</span>
+                    </div>
+                    <p>{{ message.content }}</p>
+                    {% if message.urgency %}<p class="urgent-flag">⚠️ Urgent</p>{% endif %}
+
+                    <!-- Message Actions Section with Respond Button -->
+                    <div class="message-actions">
+                        
+                        {% if message.status == 'new' %}
+                            <a class="claim-button" href="{% url 'claim_message' message.id %}">Claim</a>
+                        {% elif message.status == 'in_progress' and message.agent == request.user.agent %}
+                            <a class="respond-button" href="{% url 'respond_to_message' message.id %}">Respond</a>
+                        {% elif message.status == 'closed' %}
+                            <span class="status-label">Closed</span>
+                        {% else %}
+                            <span class="status-label">In Progress by {{ message.agent }}</span>
+                        {% endif %}
+                    </div>
+                    <!-- End of Message Actions Section -->
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No messages available.</p>
+        {% endif %}
+    </section>
+</div>
+
+</body>
+</html>
